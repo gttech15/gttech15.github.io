@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+https://gttech15.github.io
+Sitemap: /sitemap.xml

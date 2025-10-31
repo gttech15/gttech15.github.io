@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — GT-TECH</title>
+  <meta name="description" content="Contact Goodluck Timothy — software developer & ethical hacker." />
+  <link rel="icon" href="logo.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="logo.svg" alt="GT-TECH logo" class="logo" />
+      <div class="brand-text">
+        <span class="company">GT-TECH</span>
+        <small class="tagline">Practical Software · Robust Security</small>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav" aria-label="Primary navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="contact.html" class="nav-link active cta">Contact</a>
+    </nav>
+
+    <div class="controls">
+      <button id="menu-toggle" aria-label="Toggle menu" class="menu-toggle">☰</button>
+      <button id="dark-toggle" aria-label="Toggle theme" class="dark-toggle">🌗</button>
+    </div>
+  </header>
+
+  <main id="main" class="main content">
+    <section class="contact-area animate-fade">
+      <h1>Contact</h1>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h2>Get in touch</h2>
+          <p>Phone: <a href="tel:+2349041212045">+2349041212045</a></p>
+          <p>Email: <a href="mailto:timothygoodluck05@gmail.com">timothygoodluck05@gmail.com</a></p>
+          <p>WhatsApp: <a class="whatsapp" href="https://wa.me/2349041212045" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+          <p>Availability: Weekdays 09:00–18:00 (local time)</p>
+        </div>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <!-- honeypot (anti-spam) -->
+          <input type="text" name="hp_field" id="hp_field" class="hp" tabindex="-1" autocomplete="off" />
+
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+          </div>
+
+          <p id="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <p class="muted small">Form currently runs client-side for demo. To enable real email delivery, wire the form to Formspree or EmailJS (instructions available on request).</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>GT-TECH</strong><br />
+        Goodluck Timothy • Software Developer & Ethical Hacker
+      </div>
+      <div class="footer-contacts">
+        <a href="mailto:timothygoodluck05@gmail.com">timothygoodluck05@gmail.com</a>
+        <span>•</span>
+        <a href="tel:+2349041212045">+2349041212045</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year4"></span> GT-TECH. All rights reserved.</div>
+  </footer>
+</body>
+</html>

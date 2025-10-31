@@ -1,0 +1,154 @@
+/* style.css - GT-TECH modern multi-page site (dark/light toggle) */
+
+/* Variables */
+:root{
+  --bg:#0f1720;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#00A8FF;
+  --accent-2:#007ACC;
+  --text:#e6eef6;
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  --gap:18px;
+  --transition:250ms cubic-bezier(.2,.9,.2,1);
+  --max-width:1100px;
+}
+
+/* Light mode */
+body.light {
+  --bg:#f5f8fb;
+  --card:#ffffff;
+  --muted:#48657a;
+  --text:#0b1720;
+  --glass: rgba(12,22,32,0.03);
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg,var(--bg),#071022);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  transition: background 320ms ease, color 320ms ease;
+}
+
+/* Skip link */
+.skip-link{position:absolute;left:-9999px;}
+.skip-link:focus{position:static;margin:8px;background:#fff;color:#000;padding:6px 8px;border-radius:6px}
+
+/* Header */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:14px 20px;
+  max-width:var(--max-width);
+  margin:18px auto;
+  position:relative;
+  z-index:30;
+}
+
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:56px;height:56px;display:block}
+.brand-text .company{display:block;font-weight:800;letter-spacing:0.4px}
+.brand-text .tagline{display:block;font-size:12px;color:var(--muted)}
+
+/* Nav */
+.nav{display:flex;gap:10px;align-items:center}
+.nav-link{color:var(--text);text-decoration:none;padding:8px 12px;border-radius:8px;transition:var(--transition)}
+.nav-link:hover{background:var(--glass);transform:translateY(-2px)}
+.nav-link.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 8px 24px rgba(0,138,255,0.12)}
+
+/* CTA */
+.cta{font-weight:700;border:1px solid rgba(255,255,255,0.06)}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;color:inherit;cursor:pointer;transition:var(--transition)}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;border:none;box-shadow:0 8px 24px rgba(0,122,204,0.12)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.btn-outline{border:1px dashed rgba(255,255,255,0.06);padding:8px 12px}
+
+/* Controls */
+.controls{display:flex;align-items:center;gap:8px}
+.menu-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:20px}
+.dark-toggle{background:transparent;border:0;color:var(--text);font-size:18px;margin-left:8px}
+
+/* Main layout */
+.main{max-width:var(--max-width);margin:14px auto;padding:0 20px}
+.hero{display:flex;gap:40px;align-items:center;justify-content:space-between;padding:22px 0}
+.hero-left{flex:1}
+.hero-title{font-size:28px;margin:0 0 12px}
+.hero-sub{color:var(--muted);margin-bottom:14px}
+.hero-ctas{display:flex;gap:12px;margin-bottom:18px}
+.hero-highlights{display:flex;gap:8px;list-style:none;padding:0;margin:0;color:var(--muted)}
+
+/* right card */
+.glass-card{background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:16px;backdrop-filter: blur(6px);box-shadow:0 8px 28px rgba(0,0,0,0.35);text-align:center}
+.logo-large{display:block;margin:0 auto 12px;width:120px}
+
+/* grid */
+.grid{display:grid;gap:18px}
+.services-grid{grid-template-columns:repeat(2,1fr)}
+.projects-grid{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){
+  .hero{flex-direction:column}
+  .services-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:1fr}
+}
+
+/* cards */
+.card, .project-card, .service-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.35)}
+.project-card h3{margin:0 0 6px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.contact-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+.contact-form label{display:block;margin-top:10px}
+.contact-form input, .contact-form textarea{width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
+
+/* honeypot hidden */
+.hp{position:absolute;left:-9999px;top:auto;height:1px;width:1px;overflow:hidden}
+
+/* footer */
+.site-footer{max-width:var(--max-width);margin:26px auto;padding:16px 20px;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;gap:18px;align-items:center}
+.footer-bottom{text-align:center;margin-top:8px;color:var(--muted)}
+
+/* modal */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(rgba(2,6,23,0.5), rgba(2,6,23,0.6));z-index:80}
+.modal.show{display:flex}
+.modal-content{background:var(--card);padding:20px;border-radius:12px;max-width:640px;width:95%}
+.modal-close{position:absolute;right:18px;top:18px;background:transparent;border:0;color:var(--text)}
+
+/* animations */
+.animate-fade{opacity:0;transform:translateY(8px);animation:fadeIn .7s forwards}
+.animate-slide-up{opacity:0;transform:translateY(12px);animation:slideUp .7s forwards}
+.animate-zoom{opacity:0;transform:scale(.98);animation:zoomIn .6s forwards}
+.animate-pop{opacity:0;transform:translateY(6px) scale(.98);animation:popIn .5s forwards}
+
+@keyframes fadeIn{to{opacity:1;transform:none}}
+@keyframes slideUp{to{opacity:1;transform:none}}
+@keyframes zoomIn{to{opacity:1;transform:none}}
+@keyframes popIn{to{opacity:1;transform:none}}
+
+/* focus styles */
+a:focus, button:focus, input:focus{outline:3px solid rgba(0,138,255,0.18); outline-offset:2px}
+
+/* responsive nav */
+@media (max-width:700px){
+  .nav{position:absolute;top:72px;right:16px;flex-direction:column;background:linear-gradient(180deg,var(--card),rgba(0,0,0,0.02));padding:12px;border-radius:12px;display:none}
+  .nav.show{display:flex}
+  .menu-toggle{display:block}
+}
+
+/* small utilities */
+.muted{color:var(--muted)}
+.small{font-size:13px}

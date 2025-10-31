@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — GT-TECH</title>
+  <meta name="description" content="GT-TECH projects. SecureChat, AutoDeploy, Pentest Toolkit." />
+  <link rel="icon" href="logo.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page projects">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="logo.svg" alt="GT-TECH logo" class="logo" />
+      <div class="brand-text">
+        <span class="company">GT-TECH</span>
+        <small class="tagline">Practical Software · Robust Security</small>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav" aria-label="Primary navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="contact.html" class="nav-link cta">Contact</a>
+    </nav>
+
+    <div class="controls">
+      <button id="menu-toggle" aria-label="Toggle menu" class="menu-toggle">☰</button>
+      <button id="dark-toggle" aria-label="Toggle theme" class="dark-toggle">🌗</button>
+    </div>
+  </header>
+
+  <main id="main" class="main content">
+    <section class="projects-list animate-fade">
+      <h1>Selected Projects</h1>
+      <div class="grid projects-grid">
+        <article class="project-card" tabindex="0" data-title="SecureChat" data-desc="E2E messaging prototype focusing on encrypted transports." data-link="https://github.com/placeholder">
+          <h3>SecureChat</h3>
+          <p class="muted">Encryption prototype</p>
+          <button class="btn btn-outline open-modal">Preview</button>
+        </article>
+
+        <article class="project-card" tabindex="0" data-title="AutoDeploy" data-desc="CI/CD templates and deployment scripts for quick releases." data-link="https://github.com/placeholder">
+          <h3>AutoDeploy</h3>
+          <p class="muted">CI/CD tooling</p>
+          <button class="btn btn-outline open-modal">Preview</button>
+        </article>
+
+        <article class="project-card" tabindex="0" data-title="Pentest Toolkit" data-desc="Authorized security assessment scripts and playbooks." data-link="https://github.com/placeholder">
+          <h3>Pentest Toolkit</h3>
+          <p class="muted">Security tooling</p>
+          <button class="btn btn-outline open-modal">Preview</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+      <a id="modal-link" class="btn btn-primary" target="_blank" rel="noopener">View Code</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>GT-TECH</strong><br />
+        Goodluck Timothy • Software Developer & Ethical Hacker
+      </div>
+      <div class="footer-contacts">
+        <a href="mailto:timothygoodluck05@gmail.com">timothygoodluck05@gmail.com</a>
+        <span>•</span>
+        <a href="tel:+2349041212045">+2349041212045</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year3"></span> GT-TECH. All rights reserved.</div>
+  </footer>
+</body>
+</html>

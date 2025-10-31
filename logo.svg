@@ -1,0 +1,22 @@
+<!-- logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 120" width="260" height="120" role="img" aria-label="GT-TECH logo">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#00A8FF"/>
+      <stop offset="1" stop-color="#007ACC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- GT mark -->
+  <g transform="translate(6,6) scale(1)">
+    <path d="M20 60 L60 10 L120 60 L95 60 L60 28 L30 60 Z" fill="url(#g1)"/>
+    <rect x="30" y="70" width="80" height="10" rx="6" fill="#071021" opacity="0.08"/>
+  </g>
+
+  <!-- GT-TECH text -->
+  <g transform="translate(140,82)">
+    <text x="0" y="0" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="28" fill="#071021">
+      GT-TECH
+    </text>
+  </g>
+</svg>
